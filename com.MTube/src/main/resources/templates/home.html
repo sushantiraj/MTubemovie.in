@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to MTube</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+
+    .head {
+        margin-bottom: 20px;
+        
+    }
+
+    .head h2 {
+        font-size: 26px;
+        color: #00176E;
+        
+    }
+
+    .head h3 {
+        font-size: 18px;
+        font-family:Gill Sans MT;
+        color: #03DAE4;
+        margin-bottom: 20px;
+    }
+
+    .head p {
+    	
+        color: #FF9F00;
+        font-size: 16px;
+        margin-bottom: 10px;
+        opacity: 0;
+        animation: slide-in 1s ease-in forwards;
+        font-family: Adobe Garamond Pro Bold;
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateX(-100%);
+            opacity: 0.5;
+        }
+        to {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+    .head p:nth-of-type(1) {
+        animation-delay: 1s;
+    }
+    .head p:nth-of-type(2) {
+        animation-delay: 2s;
+    }
+    .head p:nth-of-type(3) {
+        animation-delay: 3s;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #002ACA;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #F5F22A;
+       	color:#6C3483;
+    }
+</style>
+</head>
+<body>
+
+    <div class="head">
+        <h2>Welcome to MTube</h2>
+        <h3>where every movie day becomes an adventure!</h3>
+        <p>Dive into a world of limitless entertainment with our vast collection of movies from every genre imaginable.</p>
+        <p>From pulse-pounding action and side-splitting comedies to spine-chilling horrors and heart-melting romances, 
+        MTube has something to ignite every mood and satisfy every craving.</p>
+        <p>So, grab your popcorn, kick back, and let MTube turn your screen into a silver screen extravaganza. MTube – your ticket to cinematic bliss!</p><br><br>
+    </div>
+
+    <div class="container">
+        <form action="exploremovies">
+            <input type="submit" value="Explore Movies">
+        </form>
+        
+        <form action="updateprofile">
+            <input type="submit" value="Update Profile">
+        </form>
+        
+        <form action="logout">
+            <input type="submit" value="Log-out">
+        </form>
+    </div>
+
+</body>
+</html>

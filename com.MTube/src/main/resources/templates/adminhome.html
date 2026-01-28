@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome Admin</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        position: relative;
+        color:#090778
+    }
+
+    .heading p {
+        margin: 5px 0 20px;
+        color: #666;
+        position: relative;
+        left: 35%;
+        transform: translateX(-50%);
+        font-family:Adobe Garamond Pro Bold;
+        
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    input[type="submit"] {
+        padding: 5px;
+        background-color: #082EC0;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        height:30px;
+        flex: 1 1 calc(33% - 20px); /* Fit three buttons per row with spacing */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #F5F22A;
+        color:#6C3483;
+    }
+</style>
+</head>
+<body>
+    <div class="heading">
+        <h2>Welcome to Admin site</h2>
+        <p>One who have wide access...</p>
+    </div>
+    <div class="container">
+        <form action="viewUser">
+            <input type="submit" value="View Users">
+        </form>
+        
+         <form id="deleteForm" action="delete" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete User">
+    </form>
+    
+    <script>
+        document.getElementById("deleteForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var userId = 1; // Replace with the actual user ID to delete
+            var url = "/api/users/" + userId;
+            
+            fetch(url, {
+                method: 'DELETE'
+            }).then(function(response) {
+                if (response.ok) {
+                    alert("User deleted successfully");
+                    // Optionally redirect to another page after deletion
+                    // window.location.href = "/redirect-url";
+                } else {
+                    alert("Failed to delete user");
+                }
+            }).catch(function(error) {
+                console.error('Error:', error);
+                alert("An error occurred while deleting user");
+            });
+        });
+    </script>
+        
+        
+        <form action="map-addmovie">
+            <input type="submit" value="Add Movie">
+        </form>
+        
+        <form action="viewmovie">
+            <input type="submit" value="View Movie">
+        </form>
+        
+        <form action="logout">
+            <input type="submit" value="Log-out">
+        </form>
+    </div>
+</body>
+</html>

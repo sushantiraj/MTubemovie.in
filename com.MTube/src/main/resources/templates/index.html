@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome To MTube</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .heading h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #00176E;
+    }
+
+    .heading p {
+        margin: 5px 0 20px;
+        color: #666;
+        font-size: 12px;
+        padding-left:100px;
+    }
+	
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+    }
+    .container p{
+    	color:#0D0A91;
+    	font-family:Adobe Garamond Pro Bold;
+    	font-size:12px;
+    	text-align: center;
+    	
+    }
+
+    .button-container {
+        display: flex;
+        gap: 90px;
+        width: 90%;
+    }
+
+    form {
+        margin: 0;
+        flex: 1;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #0B089D;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+       background-color: #FD9E00;
+       color:#6C3483;
+    }
+</style>
+</head>
+<body>
+    <div class="heading">
+        <h2>Welcome To MTube</h2>
+        <p>Watch What Your Heart Desires</p>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="button-container">
+            <form action="map-signup">
+                <input type="submit" value="Sign-up">
+                <p>New user kindly register</p>
+            </form>
+            <form action="map-login">
+                <input type="submit" value="Log-in">
+                <p>Already registered then please log-in</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
